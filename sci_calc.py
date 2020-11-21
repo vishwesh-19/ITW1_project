@@ -182,7 +182,7 @@ def action_percent():
     if(is_number(num1)==True and is_number(num2)==True):
         num1 = casting(num1);
         num2 = casting(num2);
-        ans = str((num1/100) * num2);
+        ans = str((num1/num2) * 100);
 
         Showtemplabel.delete(0, END);
         Showlabel.delete(0, END)
