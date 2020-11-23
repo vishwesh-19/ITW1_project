@@ -200,7 +200,7 @@ def action_cos():
     Showlabel.delete(0, END)
   
     Showtemplabel.config(fg='yellow', bg='#8dad96')
-    Showtemplabel.insert(0, 'cosine');
+    Showtemplabel.insert(0, 'cos');
     Showtemplabel.place(relx=0.5, rely=0.5, anchor='center')
 
     ans = "0"
@@ -211,7 +211,7 @@ def action_cos():
     num1 = Numberentry1.get();
     if(is_number(num1)==True):
         num1 = casting(num1)
-        ans = str(np.cos(num1))
+        ans = str(math.cos(num1))
         Showtemplabel.delete(0, END);
         Showlabel.delete(0, END)
 
@@ -230,7 +230,7 @@ def action_sin():
     Showlabel.delete(0, END)
   
     Showtemplabel.config(fg='yellow', bg='#8dad96')
-    Showtemplabel.insert(0, 'sine');
+    Showtemplabel.insert(0, 'sin');
     Showtemplabel.place(relx=0.5, rely=0.5, anchor='center')
 
     ans = "0"
@@ -241,7 +241,7 @@ def action_sin():
     num1 = Numberentry1.get();
     if(is_number(num1)==True):
         num1 = casting(num1)
-        ans = str(np.sin(num1))
+        ans = str(math.sin(num1))
         Showtemplabel.delete(0, END);
         Showlabel.delete(0, END)
 
@@ -254,13 +254,13 @@ def action_sin():
     else:
         messagebox.showerror("Error", "Enter a Valid number\ne.g. 123, 0.123, .123, -0.123, 123.456")
 
-# Tangent Function
+# Tan Function
 def action_tan():
     Showtemplabel.delete(0, END);
     Showlabel.delete(0, END)
     
     Showtemplabel.config(fg='yellow', bg='#8dad96')
-    Showtemplabel.insert(0, 'tangent');
+    Showtemplabel.insert(0, 'tan');
     Showtemplabel.place(relx=0.5, rely=0.5, anchor='center')
 
     ans = "0"
@@ -271,7 +271,7 @@ def action_tan():
     num1 = Numberentry1.get();
     if(is_number(num1)==True):
         num1 = casting(num1)
-        ans = str(np.tan(num1))
+        ans = str(math.tan(num1))
         Showtemplabel.delete(0, END);
         Showlabel.delete(0, END)
 
@@ -291,7 +291,7 @@ def action_acos():
     Showlabel.delete(0, END)
   
     Showtemplabel.config(fg='yellow', bg='#8dad96')
-    Showtemplabel.insert(0, 'acosine');
+    Showtemplabel.insert(0, 'acos');
     Showtemplabel.place(relx=0.5, rely=0.5, anchor='center')
 
     ans = "0"
@@ -302,7 +302,7 @@ def action_acos():
     num1 = Numberentry1.get();
     if(is_number(num1)==True):
         num1 = casting(num1)
-        ans = str(np.acos(num1))
+        ans = str(math.acos(num1))
         Showtemplabel.delete(0, END);
         Showlabel.delete(0, END)
 
@@ -321,7 +321,7 @@ def action_asin():
     Showlabel.delete(0, END)
   
     Showtemplabel.config(fg='yellow', bg='#8dad96')
-    Showtemplabel.insert(0, 'asine');
+    Showtemplabel.insert(0, 'asin');
     Showtemplabel.place(relx=0.5, rely=0.5, anchor='center')
 
     ans = "0"
@@ -332,7 +332,7 @@ def action_asin():
     num1 = Numberentry1.get();
     if(is_number(num1)==True):
         num1 = casting(num1)
-        ans = str(np.asin(num1))
+        ans = str(math.asin(num1))
         Showtemplabel.delete(0, END);
         Showlabel.delete(0, END)
 
@@ -351,7 +351,7 @@ def action_atan():
     Showlabel.delete(0, END)
   
     Showtemplabel.config(fg='yellow', bg='#8dad96')
-    Showtemplabel.insert(0, 'atangent');
+    Showtemplabel.insert(0, 'atan');
     Showtemplabel.place(relx=0.5, rely=0.5, anchor='center')
 
     ans = "0"
@@ -362,7 +362,7 @@ def action_atan():
     num1 = Numberentry1.get();
     if(is_number(num1)==True):
         num1 = casting(num1)
-        ans = str(np.atan(num1))
+        ans = str(math.atan(num1))
         Showtemplabel.delete(0, END);
         Showlabel.delete(0, END)
 
@@ -392,7 +392,7 @@ def action_ln():
     num1 = Numberentry1.get();
     if(is_number(num1)==True):
         num1 = casting(num1)
-        ans = str(np.log(num1))
+        ans = str(math.log(num1))
         Showtemplabel.delete(0, END);
         Showlabel.delete(0, END)
 
@@ -601,7 +601,7 @@ def action_pi():
 
     Showlabel.insert(0, ans);
     Showlabel.place(relx=0.5, rely=0.6, anchor='center')
-    ans = str(np.pi)
+    ans = str(math.pi)
     Showtemplabel.delete(0, END);
     Showlabel.delete(0, END)
 
@@ -712,9 +712,9 @@ def action_fact():
 
 # Main Window        
 root = Tk()
-root.title('Python Calculator')
+root.title('ITW1 Project : Scientific Calculator')
 root.geometry('500x300+200+250')
-Titlelabel = Label(root, fg = 'green' , font = 'none 10 bold underline' ,text = 'Python Calculator', compound = CENTER)
+Titlelabel = Label(root, fg = 'green' , font = 'none 10 bold underline' ,text = 'Scientific Calculator', compound = CENTER)
 Titlelabel.place(relx=0.1, rely=0.1, anchor='center')
 Showlabel = Entry(root);
 Showtemplabel = Entry(root);
