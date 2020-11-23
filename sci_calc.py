@@ -3,9 +3,6 @@ from tkinter import messagebox;
 import numpy as np
 import math
 
-def actionauthor():
-    messagebox.showinfo("IT Workshop Project")
-
 #Check whether the input string is a number or not
 def is_number(s):
     if(s != ''):
@@ -24,6 +21,7 @@ def is_number(s):
                 return True;
         return False;
 
+# Convert input number from string to integer if no "." is there in string else convert it to float    
 def casting(num):
     if('.' in num):
         return float(num);
@@ -31,7 +29,7 @@ def casting(num):
         return int(num)
 
 
-#Plus sign function
+# Addition function
 def actionPlus():
     Showtemplabel.delete(0, END);
     Showlabel.delete(0, END)
@@ -63,7 +61,7 @@ def actionPlus():
     else:
         messagebox.showerror("Error", "Enter a Valid number\ne.g. 123, 0.123, .123, -0.123, 123.456")
 
-#Minus sign function
+# Subtraction function
 def actionMinus():
     Showtemplabel.delete(0, END);
     Showlabel.delete(0, END)
@@ -97,7 +95,7 @@ def actionMinus():
     else:
         messagebox.showerror("Error", "Enter a Valid number\ne.g. 123, 0.123, .123, -0.123, 123.456")
 
-#Multiplication sign function
+#Multiplication function
 def actionMul():
     Showtemplabel.delete(0, END);
     Showlabel.delete(0, END)
@@ -130,7 +128,7 @@ def actionMul():
     else:
         messagebox.showerror("Error", "Enter a Valid number\ne.g. 123, 0.123, .123, -0.123, 123.456")
 
-#Division sign function
+#Division function
 def actionDiv():
     Showtemplabel.delete(0, END);
     Showlabel.delete(0, END)
@@ -163,7 +161,7 @@ def actionDiv():
     else:
         messagebox.showerror("Error", "Enter a Valid number\ne.g. 123, 0.123, .123, -0.123, 123.456")
         
-#Percentage sign function
+#Percentage function
 def action_percent():
     Showtemplabel.delete(0, END);
     Showlabel.delete(0, END)
@@ -738,10 +736,6 @@ mulbutton.place(relx=0.3, rely=0.7)
 divbutton = Button(root, text="/", width = 5, command = actionDiv);
 divbutton.place(relx=0.4, rely=0.7)
 
-# Author Button
-authorbutton = Button(root, text='Author', width=6, command = actionauthor);
-authorbutton.place(relx = 0.5, rely=0.95, anchor='center');
-
 #Percent Button
 percent_button = Button(root, text="%", width = 5, command = action_percent)
 percent_button.place(relx=0.5, rely=0.7)
@@ -803,7 +797,7 @@ ceil_button = Button(root, text="ceil", width = 5, command = action_ceil)
 ceil_button.place(relx=0.7, rely=0.9)
 
 # Factorial Button
-fact_button = Button(root, text="fact", width = 5, command = action_fact)
+fact_button = Button(root, text="!", width = 5, command = action_fact)
 fact_button.place(relx=0.8, rely=0.9)
 
 root.resizable(True, True);
